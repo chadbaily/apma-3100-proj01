@@ -54,3 +54,19 @@ responses.sort()
 print("First Quantile: ", np.percentile(responses, 25))
 print("Median: ", np.percentile(responses, 50))
 print("Second Quantile: ", np.percentile(responses, 75))
+
+for n in responses:
+    if n <= 15:
+        fifteen_count+= 1.0
+    if n <= 20:
+        twenty_count += 1.0
+    if n <= 30:
+        thirty_count += 1.0
+    if n < 40:
+        fourty_count += 1.0
+
+
+print("P(W <= 15): "+ str(fifteen_count/500.0))
+print("P(W <= 20): "+ str(twenty_count/500.0))
+print("P(W <= 30): "+ str(thirty_count/500.0))
+print("P(W <= 40): "+ str(fourty_count/500.0))
