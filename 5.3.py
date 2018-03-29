@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 
 def callSim(uVal, count, time):
@@ -43,5 +44,13 @@ responses = []
 for n in range(0, 500):
     responses.append(callSim(uVal, 0, 6))
 
+responseNum = 0
 for response in responses:
-    print(response)
+    responseNum = responseNum + 1
+    print(responseNum, ": ", response)
+
+responses.sort()
+
+print("First Quantile: ", np.percentile(responses, 25))
+print("Median: ", np.percentile(responses, 50))
+print("Second Quantile: ", np.percentile(responses, 75))
