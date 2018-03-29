@@ -10,7 +10,10 @@ def callSim(uVal, count, time):
         elif temp > 0.2 and temp <= 0.5:
             return callSim(uVal, count, time + 26)
         else:
-            # if(((-math.log(1 - temp) * 12)) > 25):
+            callTime = (-math.log(1 - temp) * 12)
+            while callTime > 25:
+                temp = uVal.pop()
+                callTime = (-math.log(1 - temp) * 12)
             return time + ((-math.log(1 - temp) * 12))
             # return 12 * math.exp(-12 * temp)
     else:
