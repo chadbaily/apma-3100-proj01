@@ -60,6 +60,9 @@ fifteen_count = 0.0
 twenty_count = 0.0
 thirty_count = 0.0
 fourty_count = 0.0
+w5_count = 0.0
+w6_count = 0.0
+w7_count = 0.0
 
 for n in responses:
     if n <= 15:
@@ -70,12 +73,23 @@ for n in responses:
         thirty_count += 1.0
     if n < 40:
         fourty_count += 1.0
+    if n > 119.04755465525902:
+        w5_count += 1.0
+    if n > 112.38870898836235:
+        w6_count += 1.0
+    if n > 109.22726521163099:
+        w7_count += 1.0
 
 
 print("P(W <= 15): " + str(fifteen_count / 500.0))
 print("P(W <= 20): " + str(twenty_count / 500.0))
 print("P(W <= 30): " + str(thirty_count / 500.0))
 print("P(W <= 40): " + str(fourty_count / 500.0))
+print("P(W > w5): ") + str(w5_count/500.0)
+print("P(W > w6): ") + str(w6_count/500.0)
+print("P(W > w7): ") + str(w7_count/500.0)
+
+
 
 for i in range(0, 20):
     print(responses.pop())
