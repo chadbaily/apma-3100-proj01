@@ -15,3 +15,7 @@ while count < itterations:
 
     count = count + 1
 
+iterator = 0
+for i in uVal:
+    iterator += 1
+    print(iterator, ":", i)
