@@ -15,7 +15,7 @@ def callSim(uVal, count, time):
             # while callTime > 25:
             #     temp = uVal.pop()
             #     callTime = (-math.log(1 - temp) * 12)
-            return time + ((-12 * math.log(1 - temp))) + 6
+            return time + ((-12 * math.log10(1 - temp))) + 6
     else:
         return time
 
@@ -76,3 +76,6 @@ print("P(W <= 15): " + str(fifteen_count / 500.0))
 print("P(W <= 20): " + str(twenty_count / 500.0))
 print("P(W <= 30): " + str(thirty_count / 500.0))
 print("P(W <= 40): " + str(fourty_count / 500.0))
+
+for i in range(0, 20):
+    print(responses.pop())
